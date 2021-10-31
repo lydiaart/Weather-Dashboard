@@ -1,35 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Weather Dashboard</title>
 </head>
+
 <body>
-    <main>
-       <!-- Navbar goes here -->
-<header>
-    <nav>
 
-    </nav>
-</header>
-    <!-- Page Layout here -->
+  <header class="col s12 m12 l12">
+    <nav class="nav-wrapper center teal lighten-1"><h2>Weather Dashboard</h2></nav>
+  </header>
+  
+  <main>
     <div class="row">
+      <div class="col s2">
+        <div class="row">
+          <div class="left-bar">
+            <h5>Search for a City:</h5>
+            <div class="search col s12">
+              <div class="search-panel card-panel">
+                <div class="input-field">
+                  <input type="text" name="search" id="search-query">
+                  <label for="search">Search</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <div class="col s3 m4 l6">
-          <!-- Grey navigation panel -->
+        <div class="row">
+          <a id="search-btn" class="btn teal lighten-2 col s12">Search</a>
         </div>
-        <div class="col s9">
-          <!-- Teal page content  -->
+        <div class="row">
+          <a id="search-btn" class="btn grey lighten-2 col s12"></a>
         </div>
-  <div class="row">
-    <div class="col s3">
-        <!-- Grey navigation panel -->
       </div>
+  
+      <div class="col s10">
+        <div class="row">
+          <div class="col s12">
+            <div class="card-panel grey lighten-2 jumbotronStyle">
+              <div class="container">
+                <h5>Search Result</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  <div>
+    <h5>5 day forecast</h5>
   </div>
+        <div class="row flexbox">
+          <div class="col-card ">
+            <div class="card-panel grey lighten-2 cardStyle">
+              <div class="container">
+                <h5>Page Title</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur...</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-card ">
+            <div class="card-panel grey lighten-2 cardStyle">
+              <div class="container">
+                <h5>Page Title</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur...</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-card ">
+            <div class="card-panel grey lighten-2 cardStyle">
+              <div class="container">
+                <h5>Page Title</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur...</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-card ">
+            <div class="card-panel grey lighten-2 cardStyle">
+              <div class="container">
+                <h5>Page Title</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur...</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-card ">
+            <div class="card-panel grey lighten-2 cardStyle">
+              <div class="container">
+                <h5>Page Title</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur...</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </main>
-    
+    </div>
+  </main>
+<footer>
+
+</footer>
 </body>
+
 </html>

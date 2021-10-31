@@ -1,0 +1,31 @@
+
+
+main {
+    height: 100vh;
+}
+
+.jumbotronStyle {
+    padding-bottom: 30px;
+    height: 50vh;
+    width: 100%;
+  }
+  
+  .col-card  {
+     margin: 1%;
+    height: 40vh;
+    width: 20% !important;
+  }
+
+  .flexbox {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .flexbox  .col-card {
+    flex: 0 0 1; 
+  }
+  
+  h2 {
+      font-family: piort cursive;
+  }
+  
