@@ -5,7 +5,7 @@ main {
 }
 
 .jumbotronStyle {
-    padding-bottom: 30px;
+    padding: 5px;
     height: 50vh;
     width: 100%;
   }
