@@ -32,10 +32,15 @@ body {
     overflow: hidden;
   }
 
-  .flexbox  .col-card {
+  .flexbox.col-card {
     flex: 0 0 1; 
   }
   
   .text-frame {
     padding-left:20px;
+  }
+
+  .search-results {
+    font-size:24px;
+    margin-bottom: 10%;
   }
