@@ -1,7 +1,18 @@
-
-
 main {
     height: 100vh;
+}
+
+* {
+  font-family: Poiret One;
+}
+
+body {
+  margin:0;
+  border:0;
+}
+.image{
+ position: relative;
+ top:15px;
 }
 
 .jumbotronStyle {
@@ -11,7 +22,7 @@ main {
   }
   
   .col-card  {
-     margin: 1%;
+    margin: 3px;
     height: 40vh;
     width: 20% !important;
   }
@@ -25,7 +36,6 @@ main {
     flex: 0 0 1; 
   }
   
-  h2 {
-      font-family: piort cursive;
+  .text-frame {
+    padding-left:20px;
   }
-  
