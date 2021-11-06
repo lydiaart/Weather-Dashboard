@@ -3,36 +3,57 @@ var searchBtn = document.querySelector("#search-btn")
 var textFrame = document.querySelector(".text-frame")
 var flexBox = document.querySelector(".flexbox")
 var searchHistoryEl = document.querySelector("#search-history")
-var searchHistory = []
+var searchHistory = JSON.parse(localStorage.getItem("history")) || []
 
 
 
 searchBtn.addEventListener("click", function () {
   console.log(searchCity.value)
 
- // if (searchHistory.indexOf(searchCity.value)===-1)
-  searchHistory.push(searchCity.value)
+  if (searchHistory.indexOf(searchCity.value) === -1){
+    searchHistory.push(searchCity.value)
 
-  localStorage.setItem("history",JSON.stringify(searchHistory))
+    localStorage.setItem("history", JSON.stringify(searchHistory))
+  }
+   
 
   getCityWeather(searchCity.value);
+
+  getSearchResult()
 })
 
-function getSearchResult(){
+getSearchResult()
+
+function getSearchResult() {
   searchHistoryEl.innerHTML = ""
   for (let i = 0; i < searchHistory.length; i++) {
-    searchHistoryEl.innerHTML =  searchHistoryEl.innerHTML + `
+    searchHistoryEl.innerHTML = searchHistoryEl.innerHTML + `
+    <div class="row">
+    <a class="search-results btn center grey lighten-2 col s11">
+    <span class="center black-text">${searchHistory[i]}</span>
+    </a>
+    </div>
 
-    <a class="search-results grey lighten-2 col s12">${searchHistory[i]}</a>
-   
     `
-    
+
   }
+
+  var searchResults = document.querySelectorAll(".search-results")
+
+  for (let i = 0; i < searchResults.length; i++) {
+    searchResults[i].addEventListener("click", function () {
+      var cityName = this.textContent
+      getCityWeather(cityName);
+
+    })
+
+  }
+
+
+
 }
 
 function getCityWeather(cityName) {
-  
-  getSearchResult()
 
 
   var currentWeatherAPI = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=15b3aa0f567265f18ce1bd88486e5f83`
@@ -68,7 +89,7 @@ function getCityWeather(cityName) {
                    <p>UV Index:${UVData.current.uvi}</p>
                    `
 
-                   flexBox.innerHTML = ""
+          flexBox.innerHTML = ""
           for (let i = 1; i < UVData.daily.length - 2; i++) {
             console.log(UVData.daily[i])
             console.log(moment(UVData.daily[i].dt, "X").format("MM/DD/YYYY"))
@@ -94,14 +115,11 @@ function getCityWeather(cityName) {
 
           }
 
-
         })
 
     })
 
-
-
 }
 
 
-getCityWeather("chicago");
+getCityWeather(searchHistory[searchHistory.length-1]);

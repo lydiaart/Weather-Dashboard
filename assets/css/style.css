@@ -10,6 +10,7 @@ body {
   margin:0;
   border:0;
 }
+
 .image{
  position: relative;
  top:15px;
@@ -37,10 +38,28 @@ body {
   }
   
   .text-frame {
-    padding-left:20px;
+    padding-left:25px;
   }
 
   .search-results {
-    font-size:24px;
-    margin-bottom: 10%;
+    font-size:16px;
+    margin-bottom: 2%;
   }
+  ::-webkit-input-placeholder {
+    color: #FF0000;
+    opacity: 1 !important; /* for older chrome versions. may no longer apply. */
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #FF0000;
+    opacity: 1 !important;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #FF0000;
+    opacity: 1 !important;
+}
+
+:-ms-input-placeholder {  
+   color: #FF0000;
+}

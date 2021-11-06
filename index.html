@@ -18,7 +18,7 @@
  
   <nav>
     <div class="nav-wrapper teal lighten-2">
-      <span><a href="#" class="weather-dashboard center">Weather Dashboard</a></span>
+      <h1><a href="#" class="weather-dashboard center">Weather Dashboard</a></h1>
     </div>
   </nav>
 
@@ -29,10 +29,10 @@
         <div class="row">
           <div class="left-bar">
             <h5>Search for a City:</h5>
-            <div class="search col s12">
+            <div class="search input-field col s12">
               <div class="search-panel card-panel">
                 <div class="input-field">
-                  <input type="text" name="search" id="search-query">
+                  <input class="input-field" type="text"  id="search-query">
                   <label for="search">Search</label>
                 </div>
               </div>
@@ -42,11 +42,13 @@
 
         <!-- search button -->
         <div class="row">
-          <a id="search-btn" class="btn teal lighten-2 col s12"></a>
+          <a id="search-btn" class="btn teal lighten-2 col s12">
+            <i class="fa fa-search"></i>
+          </a>
         </div>
         <!-- search history -->
         <div id="search-history" class="row">
-          
+        
         </div>
       </div>
 
