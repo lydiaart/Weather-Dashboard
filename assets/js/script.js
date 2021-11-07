@@ -10,12 +10,12 @@ var searchHistory = JSON.parse(localStorage.getItem("history")) || []
 searchBtn.addEventListener("click", function () {
   console.log(searchCity.value)
 
-  if (searchHistory.indexOf(searchCity.value) === -1){
+  if (searchHistory.indexOf(searchCity.value) === -1) {
     searchHistory.push(searchCity.value)
 
     localStorage.setItem("history", JSON.stringify(searchHistory))
   }
-   
+
 
   getCityWeather(searchCity.value);
 
@@ -121,5 +121,8 @@ function getCityWeather(cityName) {
 
 }
 
+if (searchHistory.length > 0 ) {
+  getCityWeather(searchHistory[searchHistory.length - 1]);
+}
 
-getCityWeather(searchHistory[searchHistory.length-1]);
+
