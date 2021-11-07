@@ -1,8 +1,7 @@
 # Weather-Dashboard
 
 ## Description
-
-
+This is a webpage that a traveler could use to navigate the weather of  cities to plan the trip accordingly.  
 
 ## Table of Contents
 
@@ -15,25 +14,25 @@
 ## Built With
 
 1. HTML
-2. CSS
+2. Materialize CSS
 3. JavaScript
-4. Server-side API
+4. Moment.js
 
 ## Usage
 
 
 
 The following image demonstrates the web application's appearance and functionality:
-<img src="./assets/image//>
+<img src="./assets/image/SS.png" alt="Screen Shot"/>
 
 
 ## Websites
 
- https://flowingcityloy.github.io/ (Links to an external site.)
+https://flowingcityloy.github.io/Weather-Dashboard/ (Links to an external site.)
 
-https://github.com/flowingcityloy/
+https://github.com/flowingcityloy/Weather-Dashboard
 
 
 ## Credits
 
-❤️ Made with love by Lydia Loy ❤️
+Lydia Loy
