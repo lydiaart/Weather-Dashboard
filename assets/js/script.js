@@ -6,10 +6,9 @@ var searchHistoryEl = document.querySelector("#search-history")
 var searchHistory = JSON.parse(localStorage.getItem("history")) || []
 
 
-
 searchBtn.addEventListener("click", function () {
-  console.log(searchCity.value)
 
+  // Search history is kept but only showing one time on the page
   if (searchHistory.indexOf(searchCity.value) === -1) {
     searchHistory.push(searchCity.value)
 
@@ -24,6 +23,7 @@ searchBtn.addEventListener("click", function () {
 
 getSearchResult()
 
+// search results
 function getSearchResult() {
   searchHistoryEl.innerHTML = ""
   for (let i = 0; i < searchHistory.length; i++) {
@@ -33,9 +33,7 @@ function getSearchResult() {
     <span class="center black-text">${searchHistory[i]}</span>
     </a>
     </div>
-
     `
-
   }
 
   var searchResults = document.querySelectorAll(".search-results")
@@ -49,12 +47,10 @@ function getSearchResult() {
 
   }
 
-
-
 }
 
+// Fetch weather data
 function getCityWeather(cityName) {
-
 
   var currentWeatherAPI = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=15b3aa0f567265f18ce1bd88486e5f83`
   fetch(currentWeatherAPI)
@@ -62,8 +58,8 @@ function getCityWeather(cityName) {
       return response.json()
     })
     .then(function (currentWeatherData) {
-      console.log(currentWeatherData)
 
+      // Fetch UV data
       var UVAPI = `https://api.openweathermap.org/data/2.5/onecall?lat=${currentWeatherData.coord.lat}&lon=${currentWeatherData.coord.lon}&units=imperial&appid=15b3aa0f567265f18ce1bd88486e5f83`
 
       fetch(UVAPI)
@@ -71,9 +67,19 @@ function getCityWeather(cityName) {
           return UVresponse.json()
         })
         .then(function (UVData) {
-
-          console.log(UVData)
-
+          var UVStatus = ""
+          if ( UVData.current.uvi >=0 && UVData.current.uvi <=2 ) {
+              UVStatus = "green"
+          } else if ( UVData.current.uvi >=3 && UVData.current.uvi <= 5 ) {
+            UVStatus = "yellow"
+          } else if ( UVData.current.uvi >=6 && UVData.current.uvi <= 7 ) {
+            UVStatus = "orange"
+          } else if (UVData.current.uvi >=8 && UVData.current.uvi <= 10 ) {
+            UVStatus = "red"
+          } else {
+            UVStatus = "purple"
+          }
+          // Current Weather details that is showing on jumbotron based on the search
           textFrame.innerHTML = `
                     <span>
     
@@ -86,9 +92,9 @@ function getCityWeather(cityName) {
                    <p>Temp:${currentWeatherData.main.temp}</p>
                    <p>Wind:${currentWeatherData.wind.speed}</p>
                    <p>humidity:${currentWeatherData.main.humidity}</p>
-                   <p>UV Index:${UVData.current.uvi}</p>
+                   <p>UV Index:<span class="${UVStatus}">${UVData.current.uvi}</span></p>
                    `
-
+// 5 day forecast
           flexBox.innerHTML = ""
           for (let i = 1; i < UVData.daily.length - 2; i++) {
             console.log(UVData.daily[i])
