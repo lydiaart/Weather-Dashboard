@@ -82,18 +82,18 @@ function getCityWeather(cityName) {
           }
           // Current Weather details that is showing on jumbotron based on the search
           textFrame.innerHTML = `
-                    <span>
+                    <h5><span>
     
                        ${currentWeatherData.name}(${moment(currentWeatherData.dt, "X").format("MM/DD/YYYY")})  
                    
                        <img class="image"  src="http://openweathermap.org/img/wn/${currentWeatherData.weather[0].icon}.png"     /> 
                       
-                  </span>
+                  </span></h5>
     
-                   <p>Temp:${currentWeatherData.main.temp}</p>
-                   <p>Wind:${currentWeatherData.wind.speed}</p>
-                   <p>humidity:${currentWeatherData.main.humidity}</p>
-                   <p>UV Index:<span class="${UVStatus}">${UVData.current.uvi}</span></p>
+                   <h6>Temp:${currentWeatherData.main.temp}</h6>
+                   <h6>Wind:${currentWeatherData.wind.speed}</h6>
+                   <h6>humidity:${currentWeatherData.main.humidity}</h6>
+                   <h6>UV Index:<span class="${UVStatus}">${UVData.current.uvi}</span></h6>
                    `
 // 5 day forecast
           flexBox.innerHTML = ""
@@ -105,16 +105,16 @@ function getCityWeather(cityName) {
                          <div class="col-card ">
                          <div class="card-panel grey lighten-2 cardStyle">
                            <div class="container">
-                           <span>
+                           <h5><span>
     
                            ${moment(UVData.daily[i].dt, "X").format("MM/DD/YYYY")}  
                        
                            <img class="image"  src="http://openweathermap.org/img/wn/${UVData.daily[i].weather[0].icon}.png"/> 
-                      </span>
+                      </span></h5>
         
-                       <p>Temp:${UVData.daily[i].temp.max}</p>
-                       <p>Wind:${UVData.daily[i].wind_speed}</p>
-                       <p>humidity:${UVData.daily[i].humidity}</p>
+                       <h6>Temp:${UVData.daily[i].temp.max}</h6>
+                       <h6>Wind:${UVData.daily[i].wind_speed}</h6>
+                       <h6>humidity:${UVData.daily[i].humidity}</h6>
                       </div>
                       </div>
                       </div>
