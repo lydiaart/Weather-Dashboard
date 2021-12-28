@@ -67,14 +67,15 @@ function getCityWeather(cityName) {
           return UVresponse.json()
         })
         .then(function (UVData) {
+          console.log(UVData.current.uvi)
           var UVStatus = ""
           if ( UVData.current.uvi >=0 && UVData.current.uvi <=2 ) {
               UVStatus = "green"
-          } else if ( UVData.current.uvi >=3 && UVData.current.uvi <= 5 ) {
+          } else if ( UVData.current.uvi >2 && UVData.current.uvi <= 5 ) {
             UVStatus = "yellow"
-          } else if ( UVData.current.uvi >=6 && UVData.current.uvi <= 7 ) {
+          } else if ( UVData.current.uvi >5 && UVData.current.uvi <= 7 ) {
             UVStatus = "orange"
-          } else if (UVData.current.uvi >=8 && UVData.current.uvi <= 10 ) {
+          } else if (UVData.current.uvi >7 && UVData.current.uvi <= 10 ) {
             UVStatus = "red"
           } else {
             UVStatus = "purple"

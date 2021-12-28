@@ -69,13 +69,13 @@ padding:0;
   }
 
   .red {
-    background-color: red;
+    background-color: rgb(241, 92, 92);
     padding: 2px 5px;
     border-radius: 2px;
   }
 
   .purple {
-    background-color: purple;
+    background-color: rgb(228, 149, 228);
     padding: 2px 5px;
     border-radius: 2px;
   }
