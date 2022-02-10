@@ -3,12 +3,16 @@
 ## Description
 This is a webpage that a traveler could use to navigate the weather of  cities to plan the trip accordingly.  
 
-## Table of Contents
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-* [Built With](#BuiltWith)
-* [Usage](#Usage)
-* [Websites](#Websites)
-* [Credits](#Credits)
+
+ ## Table of Contents
+* [Installation](#installation)
+* [Built With](#builtwith)
+* [Usage](#usage)
+* [Website](#website)
+* [Credits](#credits)
+* [Questions](#questions)
 
 
 ## Built With
@@ -18,19 +22,20 @@ This is a webpage that a traveler could use to navigate the weather of  cities t
 3. JavaScript
 4. Moment.js
 
+
 ## Usage
 
-
-
 The following image demonstrates the web application's appearance and functionality:
-<img src="./assets/image/SS.png" alt="Screen Shot"/>
+<p><img src="./assets/image/Weather Dashboard.gif"/></p>
+Please click on the following link for clearer video:
+<p><a href=https://watch.screencastify.com/v/pXvbO0V5x31L06q63oPQ>Link</a></p>
 
 
 ## Websites
 
-[Live site](https://flowingcityloy.github.io/Weather-Dashboard/) (Links to an external site.)<br />
+[Repository](https://github.com/flowingcityloy/Weather-Dashboard)<br />
 
-[Repository](https://github.com/flowingcityloy/Weather-Dashboard)
+[Live site](https://flowingcityloy.github.io/Weather-Dashboard/)
 
 
 ## Credits
