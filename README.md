@@ -40,7 +40,7 @@ Please click on the following link for clearer video:
 
 ## Credits
 
-Lydia Loy
+Lydia L
 
 ## Questions
   
